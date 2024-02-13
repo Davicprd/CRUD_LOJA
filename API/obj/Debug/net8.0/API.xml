@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>API</name>
+    </assembly>
+    <members>
+        <member name="M:API.Controllers.DescontoController.GetDescontos">
+            <summary>
+            Obter todos os Descontos
+            </summary>
+            <returns>Lista de Descontos</returns>
+            <response code="200">Sucesso</response>
+        </member>
+        <member name="M:API.Controllers.DescontoController.GetDesconto(System.Int32)">
+            <summary>
+            Obter um Desconto
+            </summary>
+            <param name="id">Identificador do Desconto</param>
+            <returns>Dados do Desconto</returns>
+            <response code="200">Sucesso</response>
+            <response code="400">Não encontrado ou Não Documentado</response>
+        </member>
+        <member name="M:API.Controllers.DescontoController.AddDesconto(API.Models.DescontoViewModel)">
+            <summary>
+            Cadastrar um Desconto
+            </summary>
+            <remarks>
+            {
+            "nome":"string",
+            "taxa":"int",
+            "produtoid":"int"
+            "usuarioid":"int"
+            }
+            </remarks>
+            <param name="DescontoModel">Dados do Desconto</param>
+            <returns>Objeto recém-criado</returns>
+            <response code="200">Sucesso</response>
+            <response code="400">Não encontrado ou Não Documentado</response>
+        </member>
+        <member name="M:API.Controllers.DescontoController.UpdateDesconto(API.Models.DescontoViewModel,System.Int32)">
+            <summary>
+            Atualizar um Desconto
+            </summary>
+            <remarks>
+            {
+            "nome":"string",
+            "taxa":"int",
+            "produtoid":"int"
+            "usuarioid":"int"
+            }
+            </remarks>
+            <param name="id">Identificador do Desconto</param>
+            <param name="DescontoModel">Dados do Desconto</param>
+            <returns>Dados do Desconto</returns>
+            <response code="400">Não encontrado ou Não Documentado.</response>
+            <response code="200">Sucesso</response>
+        </member>
+        <member name="M:API.Controllers.DescontoController.DeleteDesconto(System.Int32)">
+            <summary>
+            Deletar um Desconto
+            </summary>
+            <param name="id">Identificador do Desconto</param>
+            <returns>Nada</returns>
+            <response code="400">Não encontrado</response>
+            <response code="200">Sucesso</response>
+        </member>
+        <member name="M:API.Controllers.LojaController.GetLojas">
+            <summary>
+            Obter todas as Lojas
+            </summary>
+            <returns>Lista de Lojas</returns>
+            <response code="200">Sucesso</response>
+        </member>
+        <member name="M:API.Controllers.LojaController.GetLoja(System.Int32)">
+            <summary>
+            Obter uma Loja e seus Produtos
+            </summary>
+            <param name="id">Identificador da Loja</param>
+            <returns>Dados da Loja</returns>
+            <response code="200">Sucesso</response>
+            <response code="400">Não encontrado ou Não Documentado</response>
+        </member>
+        <member name="M:API.Controllers.LojaController.GetProdutos(System.Int32)">
+            <summary>
+            Obter Produtos da Loja
+            </summary>
+            <param name="LojaId">Identificador da Loja</param>
+            <returns>Produtos da Loja</returns>
+            <response code="200">Sucesso</response>
+            <response code="400">Não encontrado ou Não Documentado</response>
+        </member>
+        <member name="M:API.Controllers.LojaController.AddLoja(API.Models.LojaViewModel)">
+            <summary>
+            Cadastrar uma Loja
+            </summary>
+            <remarks>
+            {
+            "nome":"string",
+            "endereço":"string",
+            "telefone":"string"
+            }
+            </remarks>
+            <param name="LojaModel">Dados da Loja</param>
+            <returns>Objeto recém-criado</returns>
+            <response code="200">Sucesso</response>
+            <response code="400">Não encontrado ou Não Documentado</response>
+        </member>
+        <member name="M:API.Controllers.LojaController.UpdateLoja(API.Models.LojaViewModel,System.Int32)">
+            <summary>
+            Atualizar uma Loja
+            </summary>
+            <remarks>
+            {
+            "Nome":"string",
+            "Endereço":"string",
+            "Telefone":"string"
+            }
+            </remarks>
+            <param name="id">Identificador da Loja</param>
+            <param name="LojaModel">Dados da Loja</param>
+            <returns>Dados da Loja</returns>
+            <response code="400">Não encontrado ou Não Documentado.</response>
+            <response code="200">Sucesso</response>
+        </member>
+        <member name="M:API.Controllers.LojaController.DeleteLoja(System.Int32)">
+            <summary>
+            Deletar uma Loja
+            </summary>
+            <param name="id">Identificador da Loja</param>
+            <returns>Nada</returns>
+            <response code="400">Não encontrado</response>
+            <response code="200">Sucesso</response>
+        </member>
+        <member name="M:API.Controllers.ProdutoController.GetProdutos">
+            <summary>
+            Obter todos os Produtos
+            </summary>
+            <returns>Lista de Produtos</returns>
+            <response code="200">Sucesso</response>
+        </member>
+        <member name="M:API.Controllers.ProdutoController.GetProduto(System.Int32)">
+            <summary>
+            Obter um Produto
+            </summary>
+            <param name="id">Identificador do Produto</param>
+            <returns>Dados do Produto</returns>
+            <response code="200">Sucesso</response>
+            <response code="400">Não encontrado ou Não Documentado</response>
+        </member>
+        <member name="M:API.Controllers.ProdutoController.GetProdutoComDesconto(System.Int32,System.Int32)">
+            <summary>
+            Obter Produto x Desconto do Cliente
+            </summary>
+            <param name="ProdutoId">Identificador do Produto</param>
+            <param name="UsuarioId">Identificador do Usuário</param>
+            <returns>Dados do Produto</returns>
+            <response code="200">Sucesso</response>
+            <response code="400">Não encontrado ou Não Documentado</response>
+        </member>
+        <member name="M:API.Controllers.ProdutoController.AddProduto(API.Models.ProdutoViewModel)">
+            <summary>
+            Cadastrar um Produto
+            </summary>
+            <remarks>
+            {
+            "nome":"string",
+            "preço":"int",
+            "estoque":"int",
+            "lojaid":"int"
+            }
+            </remarks>
+            <param name="ProdutoModel">Dados do Produto</param>
+            <returns>Objeto recém-criado</returns>
+            <response code="200">Sucesso</response>
+            <response code="400">Não encontrado ou Não Documentado</response>
+        </member>
+        <member name="M:API.Controllers.ProdutoController.UpdateProduto(API.Models.ProdutoViewModel,System.Int32)">
+            <summary>
+            Atualizar um Produto
+            </summary>
+            <remarks>
+            {
+            "nome":"string",
+            "preço":"int",
+            "estoque":"int",
+            "lojaid":"int"
+            }
+            </remarks>
+            <param name="id">Identificador do Produto</param>
+            <param name="ProdutoModel">Dados do Produto</param>
+            <returns>Dados do Produto</returns>
+            <response code="400">Não encontrado ou Não Documentado.</response>
+            <response code="200">Sucesso</response>
+        </member>
+        <member name="M:API.Controllers.ProdutoController.DeleteProduto(System.Int32)">
+            <summary>
+            Deletar um Produto
+            </summary>
+            <param name="id">Identificador do Produto</param>
+            <returns>Nada</returns>
+            <response code="400">Não encontrado</response>
+            <response code="200">Sucesso</response>
+        </member>
+        <member name="M:API.Controllers.UsuarioController.GetUsuarios">
+            <summary>
+            Obter todos os Usuários
+            </summary>
+            <returns>Lista de Usuários</returns>
+            <response code="200">Sucesso</response>
+        </member>
+        <member name="M:API.Controllers.UsuarioController.GetUsuario(System.Int32)">
+            <summary>
+            Obter um Usuário e seus Descontos 
+            </summary>
+            <param name="id">Identificador do Usuário</param>
+            <returns>Dados do Usuário</returns>
+            <response code="200">Sucesso</response>
+            <response code="400">Não encontrado ou Não Documentado</response>
+        </member>
+        <member name="M:API.Controllers.UsuarioController.GetDescontos(System.Int32)">
+            <summary>
+            Obter Descontos do Usuário
+            </summary>
+            <param name="UsuarioId">Identificador do Usuário</param>
+            <returns>Descontos do Usuário</returns>
+            <response code="200">Sucesso</response>
+            <response code="400">Não encontrado ou Não Documentado</response>
+        </member>
+        <member name="M:API.Controllers.UsuarioController.AddUsuario(API.Models.UsuarioViewModel)">
+            <summary>
+            Cadastrar um Usuário
+            </summary>
+            <remarks>
+            {
+            "Nome":"string",
+            "Email":"string",
+            "Telefone":"string"
+            }
+            </remarks>
+            <param name="UsuarioModel">Dados do Usuário</param>
+            <returns>Objeto recém-criado</returns>
+            <response code="200">Sucesso</response>
+            <response code="400">Não encontrado ou Não Documentado</response>
+        </member>
+        <member name="M:API.Controllers.UsuarioController.UpdateUsuario(API.Models.UsuarioViewModel,System.Int32)">
+            <summary>
+            Atualizar um Usuário
+            </summary>
+            <remarks>
+            {
+            "Nome":"string",
+            "Email":"string",
+            "Telefone":"string"
+            }
+            </remarks>
+            <param name="id">Identificador do Usuário</param>
+            <param name="UsuarioModel">Dados do Usuário</param>
+            <returns>Dados do Usuário</returns>
+            <response code="400">Não encontrado ou Não Documentado.</response>
+            <response code="200">Sucesso</response>
+        </member>
+        <member name="M:API.Controllers.UsuarioController.DeleteUsuario(System.Int32)">
+            <summary>
+            Deletar um Usuário
+            </summary>
+            <param name="id">Identificador do Usuário</param>
+            <returns>Nada</returns>
+            <response code="400">Não encontrado</response>
+            <response code="200">Sucesso</response>
+        </member>
+        <member name="T:API.Migrations.FinalDb">
+            <inheritdoc />
+        </member>
+        <member name="M:API.Migrations.FinalDb.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:API.Migrations.FinalDb.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:API.Migrations.FinalDb.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
