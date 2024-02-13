@@ -17,7 +17,7 @@ Este é um projeto independente no qual utilizei C# e Asp.Net Core na construç�
 7. Já no arquivo, no campo a seguir Troque o Server "DAVI" para o seu Server do seu SQL Server.
 -    "ConnectionStrings": {
 -    "Database": "Server=DAVI;Database=Banco_De_Dados;Trusted_Connection=True;TrustServerCertificate=True"}
--    (!help: Caso não saiba qual servidor do SQL Server, abra o SQL Server Managment Studio, no campo Server Name, caso tenha somente <browse> clique nele e em Database Engine estará seu Server)
+-    (!help: Caso não saiba qual servidor do SQL Server, abra o SQL Server Managment Studio, no campo Server Name, caso tenha somente (browse for more..) clique nele e em Database Engine estará seu Server)
 -    (att: Caso possua um Banco de Dados chamado:"Banco_De_Dados" já criado no seu Server, Mude o Nome para um de seu Gosto! Caso contrário ele será alterado nos próximos passos!)
 8. Abra o Gerenciador de Pacotes Novamente e Insira os Seguintes comandos em sequência:
 -   Add-Migration FinalDb -Context Contexto
